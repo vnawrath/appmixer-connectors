@@ -1,0 +1,14 @@
+{
+    "name": "appmixer.telegram",
+    "version": "1.0.0",
+    "engine": ">=6.0.0",
+    "changelog": {
+        "1.0.0": [
+            "Initial implementation of Telegram Bot API connector",
+            "Bot token authentication",
+            "Message sending and receiving via webhooks",
+            "Basic file operations support",
+            "Bot management components"
+        ]
+    }
+}
