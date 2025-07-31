@@ -52,15 +52,15 @@ The Telegram connector will enable workflow automation through Telegram bots, fo
 
 ---
 
-### Phase 3: Core Message Trigger ⬜ 
+### Phase 3: Core Message Trigger ✅
 **Goal**: Implement webhook-based message listening
 
 **Tasks**:
-- [ ] Create `messages/` module directory
-- [ ] Create `NewMessage` trigger component
-- [ ] Implement webhook registration/management
-- [ ] Add message parsing and filtering
-- [ ] Test webhook reception and message processing
+- [x] Create `messages/` module directory
+- [x] Create `NewMessage` trigger component
+- [x] Implement webhook registration/management
+- [x] Add message parsing and filtering
+- [x] Test webhook reception and message processing
 
 **Reference Documentation**:
 - [`docs/05_behavior.md`](docs/05_behavior.md) - Component behavior and webhook handling
