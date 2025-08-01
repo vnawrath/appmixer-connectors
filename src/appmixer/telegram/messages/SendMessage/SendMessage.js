@@ -4,7 +4,7 @@ module.exports = {
 
     async receive(context) {
 
-        const { chatId, text, parseMode, disableWebPagePreview, disableNotification } = context.messages.in.content;
+        const { chatId, text, parseMode, disableWebPagePreview, disableNotification, replyMarkup } = context.messages.in.content;
         
         // Validate inputs
         if (!chatId) {
@@ -36,6 +36,17 @@ module.exports = {
         
         if (disableNotification === true) {
             payload.disable_notification = true;
+        }
+
+        // Add keyboard markup if provided
+        if (replyMarkup) {
+            try {
+                // Parse JSON string if it's a string, otherwise use as object
+                const markup = typeof replyMarkup === 'string' ? JSON.parse(replyMarkup) : replyMarkup;
+                payload.reply_markup = markup;
+            } catch (error) {
+                throw new context.CancelError('Invalid keyboard markup JSON format');
+            }
         }
 
         // Make the API call

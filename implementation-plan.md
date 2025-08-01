@@ -94,15 +94,15 @@ The Telegram connector will enable workflow automation through Telegram bots, fo
 
 ---
 
-### Phase 5: Keyboard Support ⬜
+### Phase 5: Keyboard Support ✅
 **Goal**: Add inline keyboard functionality to messages
 
 **Tasks**:
-- [ ] Extend `SendMessage` with keyboard options
-- [ ] Create `SendMessageWithKeyboard` component
-- [ ] Implement inline keyboard handling
-- [ ] Add callback query processing
-- [ ] Test interactive message flows
+- [x] Extend `SendMessage` with keyboard options
+- [x] Create `SendMessageWithKeyboard` component
+- [x] Implement inline keyboard handling
+- [x] Add callback query processing
+- [x] Test interactive message flows
 
 **Reference Documentation**:
 - [`docs/telegram-api.md`](docs/telegram-api.md) - Keyboard and callback examples
@@ -232,8 +232,10 @@ src/appmixer/telegram/
 ├── lib.js                # Common utilities
 ├── messages/             # Message operations
 │   ├── NewMessage/       # Webhook trigger for incoming messages
-│   ├── SendMessage/      # Send text messages
-│   └── SendMessageWithKeyboard/  # Send messages with inline keyboards
+│   ├── SendMessage/      # Send text messages (with keyboard support)
+│   ├── SendMessageWithKeyboard/  # Send messages with inline keyboards
+│   ├── CallbackQuery/    # Webhook trigger for inline button presses
+│   └── AnswerCallbackQuery/      # Respond to callback queries
 ├── files/                # File operations
 │   ├── SendPhoto/        # Send photo messages
 │   ├── SendDocument/     # Send document files
@@ -269,10 +271,10 @@ src/appmixer/telegram/
 - ✅ Real-time message triggers work via webhooks  
 - ✅ Messages can be sent with text formatting
 - ✅ Interactive keyboards function properly
-- ✅ File uploads/downloads work correctly
-- ✅ Rate limiting prevents API overuse
-- ✅ Comprehensive test coverage
-- ✅ Clear documentation and examples
+- ⬜ File uploads/downloads work correctly
+- ⬜ Rate limiting prevents API overuse
+- ⬜ Comprehensive test coverage
+- ⬜ Clear documentation and examples
 
 ## Technical Considerations
 

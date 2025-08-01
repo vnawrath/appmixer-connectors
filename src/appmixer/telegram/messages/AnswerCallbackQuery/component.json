@@ -1,0 +1,87 @@
+{
+    "name": "appmixer.telegram.messages.AnswerCallbackQuery",
+    "label": "Answer Callback Query",
+    "author": "Appmixer <info@appmixer.com>",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiMwMDg4Y2MiLz4KPHBhdGggZD0iTTUuMzQgMTJhLjggLjggMCAwIDEgMS4wNDUtLjc2NGwxMi44My00Ljg0NGEuOC44IDAgMCAxIDEuMDEuOTEzTDE4LjMgMTIuOThhLjkuOSAwIDAgMS0uNzk0Ljc4M2wtNC4xNjQuNDcyYS41LjUgMCAwIDAtLjM2My4yNDdsLTIuNyAzLjgyN2EuOC44IDAgMCAxLTEuNDc1LS40NDhsLjU2NC0zLjEyNGEuNS41IDAgMCAwLS4xOTgtLjUwNWwtMy45NzMtMi45N2EuOC44IDAgMCAxIC4xNDMtMS4zMTNaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJtOSA5IDMgMyAzLTMiIHN0cm9rZT0iIzAwODhjYyIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K",
+    "description": "Answer a callback query from an inline keyboard button press.",
+    "private": false,
+    "auth": {
+        "service": "appmixer:telegram"
+    },
+    "inPorts": [
+        {
+            "name": "in",
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "callbackQueryId": { 
+                        "type": "string",
+                        "description": "Unique identifier for the callback query to answer"
+                    },
+                    "text": { 
+                        "type": "string",
+                        "description": "Text of the notification (optional, 0-200 characters)"
+                    },
+                    "showAlert": {
+                        "type": "boolean",
+                        "description": "If true, an alert will be shown instead of a notification"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "URL to open (for Telegram apps supporting it)"
+                    },
+                    "cacheTime": {
+                        "type": "number",
+                        "description": "Maximum amount of time in seconds the result may be cached client-side (default: 0)"
+                    }
+                },
+                "required": ["callbackQueryId"]
+            },
+            "inspector": {
+                "inputs": {
+                    "callbackQueryId": {
+                        "type": "text",
+                        "label": "Callback Query ID",
+                        "tooltip": "The unique identifier for the callback query. This is usually received from the Callback Query trigger.",
+                        "index": 1
+                    },
+                    "text": {
+                        "type": "text",
+                        "label": "Notification Text",
+                        "tooltip": "Optional text to show as a notification to the user (max 200 characters).",
+                        "index": 2
+                    },
+                    "showAlert": {
+                        "type": "toggle",
+                        "label": "Show Alert",
+                        "tooltip": "If enabled, shows an alert dialog instead of a toast notification.",
+                        "index": 3,
+                        "defaultValue": false
+                    },
+                    "url": {
+                        "type": "text",
+                        "label": "URL to Open",
+                        "tooltip": "Optional URL to open in the user's browser or Telegram app.",
+                        "index": 4
+                    },
+                    "cacheTime": {
+                        "type": "number",
+                        "label": "Cache Time (seconds)",
+                        "tooltip": "How long (in seconds) the result may be cached on the client side. Default is 0.",
+                        "index": 5,
+                        "defaultValue": 0
+                    }
+                }
+            }
+        }
+    ],
+    "outPorts": [
+        {
+            "name": "out",
+            "options": [
+                { "label": "Success", "value": "ok", "schema": { "type": "boolean" } },
+                { "label": "Description", "value": "description", "schema": { "type": "string" } }
+            ]
+        }
+    ]
+}
