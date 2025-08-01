@@ -1,0 +1,120 @@
+{
+  "name": "appmixer.telegram.messages.CallbackQuery",
+  "label": "Callback Query",
+  "author": "Appmixer <info@appmixer.com>",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiMwMDg4Y2MiLz4KPHBhdGggZD0iTTUuMzQgMTJhLjggLjggMCAwIDEgMS4wNDUtLjc2NGwxMi44My00Ljg0NGEuOC44IDAgMCAxIDEuMDEuOTEzTDE4LjMgMTIuOThhLjkuOSAwIDAgMS0uNzk0Ljc4M2wtNC4xNjQuNDcyYS41LjUgMCAwIDAtLjM2My4yNDdsLTIuNyAzLjgyN2EuOC44IDAgMCAxLTEuNDc1LS40NDhsLjU2NC0zLjEyNGEuNS41IDAgMCAwLS4xOTgtLjUwNWwtMy45NzMtMi45N2EuOC44IDAgMCAxIC4xNDMtMS4zMTNaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJtMTEgMTMgMi0yIDItMiIgc3Ryb2tlPSIjMDA4OGNjIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvcG5nPg==",
+  "description": "This trigger fires when a user clicks an inline keyboard button.",
+  "webhook": true,
+  "version": "1.0.0",
+  "auth": {
+    "service": "appmixer:telegram"
+  },
+  "outPorts": [
+    {
+      "name": "callbackQuery",
+      "options": [
+        {
+          "label": "Callback Query ID",
+          "value": "id",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Callback Data",
+          "value": "data",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "User ID",
+          "value": "from.id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Username",
+          "value": "from.username",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "First Name",
+          "value": "from.first_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Last Name",
+          "value": "from.last_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Message ID",
+          "value": "message.message_id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Message Text",
+          "value": "message.text",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Message Date",
+          "value": "message.date",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Chat ID",
+          "value": "message.chat.id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Chat Type",
+          "value": "message.chat.type",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat Title",
+          "value": "message.chat.title",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Inline Message ID",
+          "value": "inline_message_id",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat Instance",
+          "value": "chat_instance",
+          "schema": { "type": "string" }
+        }
+      ]
+    }
+  ],
+  "properties": {
+    "schema": {
+      "properties": {
+        "callbackData": { 
+          "type": "string",
+          "description": "Filter by specific callback data"
+        },
+        "chatId": { 
+          "type": "string",
+          "description": "Filter by specific chat ID"
+        }
+      },
+      "required": []
+    },
+    "inspector": {
+      "inputs": {
+        "callbackData": {
+          "type": "text",
+          "label": "Callback Data Filter",
+          "index": 1,
+          "tooltip": "Optional: Enter specific callback data to filter for. Leave empty to receive all callback queries."
+        },
+        "chatId": {
+          "type": "text",
+          "label": "Chat ID Filter",
+          "index": 2,
+          "tooltip": "Optional: Enter the chat ID to listen for callback queries from a specific chat only. Leave empty to listen to all chats."
+        }
+      }
+    }
+  }
+}

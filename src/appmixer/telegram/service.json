@@ -1,0 +1,7 @@
+{
+    "name": "appmixer.telegram",
+    "label": "Telegram",
+    "category": "applications",
+    "description": "Telegram is a cloud-based instant messaging service and voice over IP service. Automate your workflows with Telegram bot integration for sending messages, handling user interactions, and managing files.",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiMwMDg4Y2MiLz4KPHBhdGggZD0iTTUuMzQgMTJhLjggLjggMCAwIDEgMS4wNDUtLjc2NGwxMi44My00Ljg0NGEuOC44IDAgMCAxIDEuMDEuOTEzTDE4LjMgMTIuOThhLjkuOSAwIDAgMS0uNzk0Ljc4M2wtNC4xNjQuNDcyYS41LjUgMCAwIDAtLjM2My4yNDdsLTIuNyAzLjgyN2EuOC44IDAgMCAxLTEuNDc1LS40NDhsLjU2NC0zLjEyNGEuNS41IDAgMCAwLS4xOTgtLjUwNWwtMy45NzMtMi45N2EuOC44IDAgMCAxIC4xNDMtMS4zMTNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+}
