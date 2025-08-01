@@ -74,15 +74,15 @@ The Telegram connector will enable workflow automation through Telegram bots, fo
 
 ---
 
-### Phase 4: Basic Message Sending ⬜
+### Phase 4: Basic Message Sending ✅
 **Goal**: Implement sending text messages
 
 **Tasks**:
-- [ ] Create `SendMessage` component
-- [ ] Add support for text formatting (HTML/Markdown)
-- [ ] Implement chat ID validation
-- [ ] Add error handling for message sending
-- [ ] Test message delivery
+- [x] Create `SendMessage` component
+- [x] Add support for text formatting (HTML/Markdown)
+- [x] Implement chat ID validation
+- [x] Add error handling for message sending
+- [x] Test message delivery
 
 **Reference Documentation**:
 - [`docs/telegram-api.md`](docs/telegram-api.md) - Message sending examples
