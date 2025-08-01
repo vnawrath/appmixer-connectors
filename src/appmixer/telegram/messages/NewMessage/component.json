@@ -1,95 +1,195 @@
 {
-    "name": "appmixer.telegram.messages.NewMessage",
-    "label": "New Message",
-    "author": "Appmixer <info@appmixer.com>",
-    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiMwMDg4Y2MiLz4KPHBhdGggZD0iTTUuMzQgMTJhLjggLjggMCAwIDEgMS4wNDUtLjc2NGwxMi44My00Ljg0NGEuOC44IDAgMCAxIDEuMDEuOTEzTDE4LjMgMTIuOThhLjkuOSAwIDAgMS0uNzk0Ljc4M2wtNC4xNjQuNDcyYS41LjUgMCAwIDAtLjM2My4yNDdsLTIuNyAzLjgyN2EuOC44IDAgMCAxLTEuNDc1LS40NDhsLjU2NC0zLjEyNGEuNS41IDAgMCAwLS4xOTgtLjUwNWwtMy45NzMtMi45N2EuOC44IDAgMCAxIC4xNDMtMS4zMTNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
-    "description": "This trigger fires every time a message is sent to a chat where your bot is present.",
-    "webhook": true,
-    "version": "1.0.0",
-    "auth": {
-        "service": "appmixer:telegram"
-    },
-    "outPorts": [
+  "name": "appmixer.telegram.messages.NewMessage",
+  "label": "New Message",
+  "author": "Appmixer <info@appmixer.com>",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiMwMDg4Y2MiLz4KPHBhdGggZD0iTTUuMzQgMTJhLjggLjggMCAwIDEgMS4wNDUtLjc2NGwxMi44My00Ljg0NGEuOC44IDAgMCAxIDEuMDEuOTEzTDE4LjMgMTIuOThhLjkuOSAwIDAgMS0uNzk0Ljc4M2wtNC4xNjQuNDcyYS41LjUgMCAwIDAtLjM2My4yNDdsLTIuNyAzLjgyN2EuOC44IDAgMCAxLTEuNDc1LS40NDhsLjU2NC0zLjEyNGEuNS41IDAgMCAwLS4xOTgtLjUwNWwtMy45NzMtMi45N2EuOC44IDAgMCAxIC4xNDMtMS4zMTNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
+  "description": "This trigger fires every time a message is sent to a chat where your bot is present.",
+  "webhook": true,
+  "version": "1.0.0",
+  "auth": {
+    "service": "appmixer:telegram"
+  },
+  "outPorts": [
+    {
+      "name": "message",
+      "options": [
         {
-            "name": "message",
-            "options": [
-                { "label": "Message ID", "value": "message_id", "schema": { "type": "number" } },
-                { "label": "Date", "value": "date", "schema": { "type": "number" } },
-                { "label": "Text", "value": "text", "schema": { "type": "string" } },
-                { "label": "From User ID", "value": "from.id", "schema": { "type": "number" } },
-                { "label": "From Username", "value": "from.username", "schema": { "type": "string" } },
-                { "label": "From First Name", "value": "from.first_name", "schema": { "type": "string" } },
-                { "label": "From Last Name", "value": "from.last_name", "schema": { "type": "string" } },
-                { "label": "From Is Bot", "value": "from.is_bot", "schema": { "type": "boolean" } },
-                { "label": "Chat ID", "value": "chat.id", "schema": { "type": "number" } },
-                { "label": "Chat Type", "value": "chat.type", "schema": { "type": "string" } },
-                { "label": "Chat Title", "value": "chat.title", "schema": { "type": "string" } },
-                { "label": "Chat Username", "value": "chat.username", "schema": { "type": "string" } },
-                { "label": "Chat First Name", "value": "chat.first_name", "schema": { "type": "string" } },
-                { "label": "Chat Last Name", "value": "chat.last_name", "schema": { "type": "string" } },
-                { "label": "Forward From User ID", "value": "forward_from.id", "schema": { "type": "number" } },
-                { "label": "Forward From Username", "value": "forward_from.username", "schema": { "type": "string" } },
-                { "label": "Forward Date", "value": "forward_date", "schema": { "type": "number" } },
-                { "label": "Reply To Message ID", "value": "reply_to_message.message_id", "schema": { "type": "number" } },
-                { "label": "Caption", "value": "caption", "schema": { "type": "string" } },
-                { "label": "Photo", "value": "photo", "schema": { "type": "array" } },
-                { "label": "Document", "value": "document", "schema": { "type": "object" } },
-                { "label": "Video", "value": "video", "schema": { "type": "object" } },
-                { "label": "Audio", "value": "audio", "schema": { "type": "object" } },
-                { "label": "Voice", "value": "voice", "schema": { "type": "object" } },
-                { "label": "Sticker", "value": "sticker", "schema": { "type": "object" } },
-                { "label": "Location", "value": "location", "schema": { "type": "object" } },
-                { "label": "Contact", "value": "contact", "schema": { "type": "object" } },
-                { "label": "Edit Date", "value": "edit_date", "schema": { "type": "number" } }
-            ]
-        }
-    ],
-    "properties": {
-        "schema": {
-            "properties": {
-                "chatId": { "type": "string" },
-                "ignoreBotMessages": { "type": "boolean" },
-                "messageType": { "type": "string", "enum": ["all", "text", "photo", "document", "video", "audio", "voice", "sticker", "location", "contact"] }
-            },
-            "required": [
-                "chatId"
-            ]
+          "label": "Message ID",
+          "value": "message_id",
+          "schema": { "type": "number" }
         },
-        "inspector": {
-            "inputs": {
-                "chatId": {
-                    "type": "text",
-                    "label": "Chat ID",
-                    "index": 1,
-                    "tooltip": "Enter the chat ID where you want to listen for messages. You can find the chat ID by messaging your bot and checking the webhook logs, or use @userinfobot to get your personal chat ID."
-                },
-                "ignoreBotMessages": {
-                    "type": "toggle",
-                    "label": "Ignore bot messages",
-                    "tooltip": "If enabled, the trigger will not fire when a bot posts a message.",
-                    "defaultValue": true,
-                    "index": 2
-                },
-                "messageType": {
-                    "type": "select",
-                    "label": "Message Type Filter",
-                    "tooltip": "Filter messages by type. Select 'all' to receive all message types.",
-                    "defaultValue": "all",
-                    "index": 3,
-                    "options": [
-                        { "label": "All Messages", "value": "all" },
-                        { "label": "Text Only", "value": "text" },
-                        { "label": "Photos", "value": "photo" },
-                        { "label": "Documents", "value": "document" },
-                        { "label": "Videos", "value": "video" },
-                        { "label": "Audio", "value": "audio" },
-                        { "label": "Voice Messages", "value": "voice" },
-                        { "label": "Stickers", "value": "sticker" },
-                        { "label": "Location", "value": "location" },
-                        { "label": "Contact", "value": "contact" }
-                    ]
-                }
-            }
+        { "label": "Date", "value": "date", "schema": { "type": "number" } },
+        { "label": "Text", "value": "text", "schema": { "type": "string" } },
+        {
+          "label": "From User ID",
+          "value": "from.id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "From Username",
+          "value": "from.username",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "From First Name",
+          "value": "from.first_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "From Last Name",
+          "value": "from.last_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "From Is Bot",
+          "value": "from.is_bot",
+          "schema": { "type": "boolean" }
+        },
+        {
+          "label": "Chat ID",
+          "value": "chat.id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Chat Type",
+          "value": "chat.type",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat Title",
+          "value": "chat.title",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat Username",
+          "value": "chat.username",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat First Name",
+          "value": "chat.first_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Chat Last Name",
+          "value": "chat.last_name",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Forward From User ID",
+          "value": "forward_from.id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Forward From Username",
+          "value": "forward_from.username",
+          "schema": { "type": "string" }
+        },
+        {
+          "label": "Forward Date",
+          "value": "forward_date",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Reply To Message ID",
+          "value": "reply_to_message.message_id",
+          "schema": { "type": "number" }
+        },
+        {
+          "label": "Caption",
+          "value": "caption",
+          "schema": { "type": "string" }
+        },
+        { "label": "Photo", "value": "photo", "schema": { "type": "array" } },
+        {
+          "label": "Document",
+          "value": "document",
+          "schema": { "type": "object" }
+        },
+        { "label": "Video", "value": "video", "schema": { "type": "object" } },
+        { "label": "Audio", "value": "audio", "schema": { "type": "object" } },
+        { "label": "Voice", "value": "voice", "schema": { "type": "object" } },
+        {
+          "label": "Sticker",
+          "value": "sticker",
+          "schema": { "type": "object" }
+        },
+        {
+          "label": "Location",
+          "value": "location",
+          "schema": { "type": "object" }
+        },
+        {
+          "label": "Contact",
+          "value": "contact",
+          "schema": { "type": "object" }
+        },
+        {
+          "label": "Edit Date",
+          "value": "edit_date",
+          "schema": { "type": "number" }
         }
+      ]
     }
+  ],
+  "properties": {
+    "schema": {
+      "properties": {
+        "chatId": { "type": "string" },
+        "ignoreBotMessages": { "type": "boolean" },
+        "messageType": {
+          "type": "string",
+          "enum": [
+            "all",
+            "text",
+            "photo",
+            "document",
+            "video",
+            "audio",
+            "voice",
+            "sticker",
+            "location",
+            "contact"
+          ]
+        }
+      },
+      "required": []
+    },
+    "inspector": {
+      "inputs": {
+        "chatId": {
+          "type": "text",
+          "label": "Chat ID",
+          "index": 1,
+          "tooltip": "Optional: Enter the chat ID to listen for messages from a specific chat only. Leave empty to listen to messages from all chats where your bot is present. You can find the chat ID by messaging your bot and checking the webhook logs, or use @userinfobot to get your personal chat ID."
+        },
+        "ignoreBotMessages": {
+          "type": "toggle",
+          "label": "Ignore bot messages",
+          "tooltip": "If enabled, the trigger will not fire when a bot posts a message.",
+          "defaultValue": true,
+          "index": 2
+        },
+        "messageType": {
+          "type": "select",
+          "label": "Message Type Filter",
+          "tooltip": "Filter messages by type. Select 'all' to receive all message types.",
+          "defaultValue": "all",
+          "index": 3,
+          "options": [
+            { "label": "All Messages", "value": "all" },
+            { "label": "Text Only", "value": "text" },
+            { "label": "Photos", "value": "photo" },
+            { "label": "Documents", "value": "document" },
+            { "label": "Videos", "value": "video" },
+            { "label": "Audio", "value": "audio" },
+            { "label": "Voice Messages", "value": "voice" },
+            { "label": "Stickers", "value": "sticker" },
+            { "label": "Location", "value": "location" },
+            { "label": "Contact", "value": "contact" }
+          ]
+        }
+      }
+    }
+  }
 }
